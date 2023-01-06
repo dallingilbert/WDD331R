@@ -1,0 +1,108 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+
+/* Body */
+
+body {
+    display: inline-block;
+    height: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333;
+}
+
+/* Headings */
+h1 {
+    text-align: center;
+    font-size: 58px;
+}
+
+h1, h2 {
+    font-family: Lora;
+    color: #333;
+}
+
+h1 a[href^="#"] {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Navigation */
+nav {
+    border-top: 1px solid #d0d0d0;
+    border-bottom: 1px solid #d0d0d0;
+}
+
+nav a {
+    text-transform: uppercase;
+    font-size: 22px;
+}
+
+ul {
+    padding: 0px;
+    margin: 5px 0px 5px 0px;
+}
+
+/* Normal and visited links */
+a,  a:visited {
+    color: #666;
+    text-decoration: none;
+}
+
+/* Active links */
+a:active {
+    color: #DEB887;
+}
+
+/* Hover Styling */
+a:hover {
+    color: #00ddff;
+}
+
+/* Paragraph text */
+article p {
+    color: #333;
+    font-size: 18;
+}
+
+/* Rules for screen smaller than 320px */
+@media screen and (max-width: 400px) {
+
+    h1, img[href^="https"], nav > ul {
+        text-align: center;
+    }
+
+    div .post-date {
+        text-align: right;
+        padding: 40px 0px 10px 0px;
+        font-size: 20px;
+        text-transform: uppercase;
+        font-weight: bold;
+        border-bottom: 1px solid #d0d0d0;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+
+    nav li {
+        padding: 10px;
+    }
+}
+
+/* Rules for screen bigger than 320px */
+@media screen and (min-width: 400px) {
+    
+
+    ul {
+        text-align: right;
+        margin: 10px 0px 10px 0px;
+
+    }
+
+    ul > li {
+        display: inline;
+        padding-right: 20px;
+    }
+}
