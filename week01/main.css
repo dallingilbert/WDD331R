@@ -45,9 +45,14 @@ ul {
 }
 
 /* Normal and visited links */
-a,  a:visited {
+a:link,  a:visited {
     color: #666;
     text-decoration: none;
+}
+
+/* Hover Styling */
+a:hover {
+    color: #00ddff;
 }
 
 /* Active links */
@@ -55,10 +60,7 @@ a:active {
     color: #DEB887;
 }
 
-/* Hover Styling */
-a:hover {
-    color: #00ddff;
-}
+
 
 /* Paragraph text */
 article p {
