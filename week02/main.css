@@ -1,0 +1,30 @@
+form p {
+    color: red;
+}
+
+span.help {
+    font-style: italic;
+    color: black;
+    
+}
+
+input:invalid {
+    background-color: red;
+}
+
+[title*="fieldset"] {
+    padding: 30px;
+}
+
+
+span.help::before {
+    content: '(';
+}
+
+span.help::after {
+    content: ')';
+}
+
+form fieldset:nth-last-child(2) > p {
+    content-visibility: hidden;
+}
