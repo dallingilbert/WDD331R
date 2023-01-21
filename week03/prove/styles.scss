@@ -1,0 +1,164 @@
+// Declaring sass variables
+
+$primary-color-text: #333;
+$visited-color-link: #666;
+$hover-color-link: #00ddff;
+$active-color-link: #DEB887;
+$gray-border: 1px solid #d0d0d0;
+$small-screen: 320px;
+$large-screen: 321px;
+
+// Mixins
+@mixin custompadding($pTop: 10px, $pBottom: 10px) {
+    padding-top: $pTop;
+    padding-bottom: $pBottom;
+}
+
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+
+/* Body */
+
+body {
+    display: inline-block;
+    width: auto;
+    height: auto;
+    font-family: "Helvetica", "Arial", sans-serif;
+    color: $primary-color-text;
+}
+
+/* Headings */
+h1 {
+    text-align: center;
+    font-size: 58px;
+}
+
+h1, h2 {
+    font-family: Lora;
+    color: $primary-color-text;
+}
+
+h1 a[href^="#"] {
+    text-decoration: none;
+    color: $primary-color-text;
+    font-weight: bold;
+}
+
+/* Navigation */
+nav {
+    border-top: $gray-border;
+    border-bottom: $gray-border;
+}
+
+nav a {
+    text-transform: uppercase;
+    font-size: 22px;
+}
+
+ul {
+    padding: 0px;
+    margin: 5px 0px 5px 0px;
+}
+
+/* Normal and visited links */
+a:link,  a:visited {
+    color: $visited-color-link;
+    text-decoration: none;
+}
+
+/* Hover Styling */
+a:hover {
+    color: $hover-color-link;
+}
+
+/* Active links */
+a:active {
+    color: $active-color-link;
+}
+
+
+
+/* Paragraph text */
+article p {
+    color: $primary-color-text;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+/* Rules for screen smaller than 320px */
+@media screen and (max-width: 320px) {
+
+    h1, img[href^="https"], nav > ul {
+        text-align: center;
+    }
+
+    div .post-date {
+        text-align: right;
+        @include custompadding(40px);
+        font-size: 20px;
+        text-transform: uppercase;
+        font-weight: bold;
+        border-bottom: $gray-border;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+
+    nav li {
+        @include custompadding();
+    }
+}
+
+/* Rules for screen bigger than 320px */
+@media screen and (min-width: 321px) {
+
+    ul {
+        text-align: right;
+        @include custompadding();
+    }
+
+    ul > li {
+        display: inline;
+        padding-right: 20px;
+    }
+    
+    article {
+        display: flex;
+    }
+
+    main {
+        margin-top: 25px;
+    }
+
+    div .post-date {
+        font-size: 26px;
+        /* font-weight: bold; */
+        flex-basis: 25%;    
+        margin-top: 25px;
+        margin-right: 15px;
+        text-align: right;
+    }
+
+    article > section {
+        border-left: $gray-border;
+        border-bottom: $gray-border;
+        flex-basis: 75%;
+    }
+
+    section > h2 {
+        margin-left: 15px;
+    }
+
+    section > figure {
+        text-align: center;
+    }
+
+    section > p {
+        margin-left: 15px;
+        margin-bottom: 20px;
+    }
+
+}
+

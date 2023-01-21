@@ -1,0 +1,37 @@
+/* Declaring SCSS variables*/
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: darkgreen;
+}
+@media (max-width: 60em) {
+  body {
+    background: red;
+  }
+}
+@media (max-width: 31em) {
+  body {
+    background: cyan;
+  }
+}
+@media (max-width: 20em) {
+  body {
+    background: yellow;
+  }
+}
+
+h1 {
+  color: lightgrey;
+}
+
+#contactform {
+  background-color: tan;
+}
+#contactform input, #contactform textarea {
+  background-color: white;
+  flex: 2;
+}
+
+/*# sourceMappingURL=styles.css.map */

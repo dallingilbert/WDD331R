@@ -1,0 +1,51 @@
+/* Declaring SCSS variables*/
+
+// colors
+$body-background-color: darkgreen;
+$form-background-color: tan;
+$input-color: white;
+$headlines-color: lightgrey;
+
+//set breakpoint sizes
+$break-small: 20em;
+$break-medium: 31em;
+$break-large: 60em;
+
+@mixin breakpoint($break) {
+    @if $break == large {
+    @media (max-width: $break-large) { @content; }
+    }
+    @else if $break == medium {
+    @media (max-width: $break-medium) { @content; }
+    }
+    @else if $break == small {
+    @media (max-width: $break-small) { @content; }
+    } @else {
+    @media ($break) { @content; }
+    }
+}               
+         
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: $body-background-color;
+    @include breakpoint(large) {background: red; }
+    @include breakpoint(medium) {background: cyan; }
+    @include breakpoint(small) {background: yellow}
+}
+
+h1 {
+    color: $headlines-color;
+}
+
+#contactform {
+    background-color: $form-background-color;
+    input, textarea {
+        background-color: $input-color;
+        flex: 2;
+    }
+}
+

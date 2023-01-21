@@ -1,0 +1,149 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+
+/* Body */
+
+body {
+    display: inline-block;
+    width: auto;
+    height: auto;
+    font-family: "Helvetica", "Arial", sans-serif;
+    color: #333;
+}
+
+/* Headings */
+h1 {
+    text-align: center;
+    font-size: 58px;
+}
+
+h1, h2 {
+    font-family: Lora;
+    color: #333;
+}
+
+h1 a[href^="#"] {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Navigation */
+nav {
+    border-top: 1px solid #d0d0d0;
+    border-bottom: 1px solid #d0d0d0;
+}
+
+nav a {
+    text-transform: uppercase;
+    font-size: 22px;
+}
+
+ul {
+    padding: 0px;
+    margin: 5px 0px 5px 0px;
+}
+
+/* Normal and visited links */
+a:link,  a:visited {
+    color: #666;
+    text-decoration: none;
+}
+
+/* Hover Styling */
+a:hover {
+    color: #00ddff;
+}
+
+/* Active links */
+a:active {
+    color: #DEB887;
+}
+
+
+
+/* Paragraph text */
+article p {
+    color: #333;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+/* Rules for screen smaller than 320px */
+@media screen and (max-width: 320px) {
+
+    h1, img[href^="https"], nav > ul {
+        text-align: center;
+    }
+
+    div .post-date {
+        text-align: right;
+        padding: 40px 0px 10px 0px;
+        font-size: 20px;
+        text-transform: uppercase;
+        font-weight: bold;
+        border-bottom: 1px solid #d0d0d0;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+
+    nav li {
+        padding: 10px 0px 10px 0px;
+    }
+}
+
+/* Rules for screen bigger than 320px */
+@media screen and (min-width: 321px) {
+
+    ul {
+        /* margin: 30px 0px 30px 0px; */
+        text-align: right;
+        padding: 10px 0px 10px 0px;
+    }
+
+    ul > li {
+        display: inline;
+        padding-right: 20px;
+    }
+    
+    article {
+        display: flex;
+    }
+
+    main {
+        margin-top: 25px;
+    }
+
+    div .post-date {
+        font-size: 26px;
+        /* font-weight: bold; */
+        flex-basis: 25%;    
+        margin-top: 25px;
+        margin-right: 15px;
+        text-align: right;
+    }
+
+    article > section {
+        border-left: 1px solid #d0d0d0;
+        border-bottom: 1px solid #d0d0d0;
+        flex-basis: 75%;
+        /* margin-top: 25px; */
+    }
+
+    section > h2 {
+        margin-left: 15px;
+    }
+
+    section > figure {
+        text-align: center;
+    }
+
+    section > p {
+        margin-left: 15px;
+        margin-bottom: 20px;
+    }
+
+}
