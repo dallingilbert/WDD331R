@@ -60,22 +60,19 @@ ul {
     margin: 5px 0px 5px 0px;
 }
 
-/* Normal and visited links */
-a:link,  a:visited {
+/* Normal, visited, hover, and active */
+a {
+    &:link, &:visited {
     color: $visited-color-link;
     text-decoration: none;
-}
-
-/* Hover Styling */
-a:hover {
+    }
+    &:hover {
     color: $hover-color-link;
-}
-
-/* Active links */
-a:active {
+    }
+    &:active {
     color: $active-color-link;
+    }
 }
-
 
 
 /* Paragraph text */
