@@ -1,0 +1,14 @@
+.card-grid {
+  display: flex;
+  border: 1px dotted black;
+}
+
+.row-grid {
+  flex: 1;
+}
+
+.col-grid {
+  flex: 1;
+}
+
+/*# sourceMappingURL=styles.css.map */
